@@ -1,0 +1,12 @@
+[Unit]
+Description=Running checkfile - reads DS18B20 data, puts on mosquitto
+After=multi-user.target
+
+[Service]
+Type=simple
+RemainAfterExit=no
+Restart=always
+ExecStart=/usr/bin/python3 /home/pi/officeclock/readtemp.py
+
+[Install]
+WantedBy=multi-user.target

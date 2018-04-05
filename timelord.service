@@ -1,0 +1,12 @@
+[Unit]
+Description=Running Timelord - on four letter phat
+After=multi-user.target
+
+[Service]
+Type=simple
+RemainAfterExit=no
+Restart=always
+ExecStart=/usr/bin/python3 /home/pi/officeclock/timelord.py
+
+[Install]
+WantedBy=multi-user.target
